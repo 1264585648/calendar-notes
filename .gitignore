@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+
+# Tauri/Rust build output
+src-tauri/target/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local caches and temporary files
+.playwright-cli/
+output/
+tmp/
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Tauri generated schemas can be rebuilt
+src-tauri/gen/schemas/

@@ -1,0 +1,31 @@
+[package]
+name = "calendar-notes"
+version = "0.1.0"
+description = "Desktop calendar notes with local Outlook sync"
+authors = ["calendar-notes"]
+edition = "2021"
+
+[lib]
+name = "calendar_notes_lib"
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+base64 = "0.22"
+chrono = { version = "0.4", features = ["clock", "serde"] }
+dirs = "6"
+keyring = "3"
+open = "5"
+rand = "0.8"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-notification = "2"
+tokio = { version = "1", features = ["time", "sync"] }
+url = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
